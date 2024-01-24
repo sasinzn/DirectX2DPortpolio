@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Program.h" />
+    <ClInclude Include="Demos\01_RectDemo.h" />
+    <ClInclude Include="Demos\02_StarDemo.h" />
+    <ClInclude Include="Demos\03_TextureDemo.h" />
+    <ClInclude Include="Demos\04_ShadedDemo.h" />
+    <ClInclude Include="Demos\05_BlurDemo.h" />
+    <ClInclude Include="Demos\06_RenderingTargetDemo.h" />
+    <ClInclude Include="Demos\07_CollisionDemo.h" />
+    <ClInclude Include="Demos\08_RectGameDemo.h" />
+    <ClInclude Include="Demos\09_AnimationDemo.h" />
+    <ClInclude Include="01.Character\Player.h" />
+    <ClInclude Include="Demos\10_PlayerDemo.h" />
+    <ClInclude Include="02.Map\MainMap.h" />
+    <ClInclude Include="99.MainGame\MainGame.h" />
+    <ClInclude Include="98.UI\HUD.h" />
+    <ClInclude Include="Demos\11_TileMapDemo.h" />
+    <ClInclude Include="01.Character\PMCenterNPC.h" />
+    <ClInclude Include="01.Character\BattleNPC.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Program.cpp" />
+    <ClCompile Include="Demos\01_RectDemo.cpp" />
+    <ClCompile Include="Demos\02_StarDemo.cpp" />
+    <ClCompile Include="Demos\03_TextureDemo.cpp" />
+    <ClCompile Include="Demos\04_ShadedDemo.cpp" />
+    <ClCompile Include="Demos\05_BlurDemo.cpp" />
+    <ClCompile Include="Demos\06_RenderingTargetDemo.cpp" />
+    <ClCompile Include="Demos\07_CollisionDemo.cpp" />
+    <ClCompile Include="Demos\08_RectGameDemo.cpp" />
+    <ClCompile Include="Demos\09_AnimationDemo.cpp" />
+    <ClCompile Include="01.Character\Player.cpp" />
+    <ClCompile Include="Demos\10_PlayerDemo.cpp" />
+    <ClCompile Include="02.Map\MainMap.cpp" />
+    <ClCompile Include="99.MainGame\MainGame.cpp" />
+    <ClCompile Include="98.UI\HUD.cpp" />
+    <ClCompile Include="Demos\11_TileMapDemo.cpp" />
+    <ClCompile Include="01.Character\PMCenterNPC.cpp" />
+    <ClCompile Include="01.Character\BattleNPC.cpp" />
+  </ItemGroup>
+</Project>

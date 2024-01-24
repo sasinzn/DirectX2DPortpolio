@@ -1,0 +1,6 @@
+육성/필드/진화/회복/몬스터볼/배틀/나무열매
+기술머신/비전머신/기술레코드/메일/보물/중요한물건/포켓몬도감/주요기기
+
+
+promote/field/evolution/heal/monsterball/battleItem/fruit
+technicalmachine / visionmachine / technicalRecord / treasure / importantarticle / pokeDex / maininstrument

@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{43815d25-7089-404b-bb9c-f070bc11bc6e}</ProjectGuid>
+    <RootNamespace>Framework</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="PropertySheet.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <LibraryPath>$(DL);$(LibraryPath)</LibraryPath>
+    <IntDir>$(SolutionDir)\.Temp\FrameWork</IntDir>
+    <OutDir>$(SolutionDir)\.Out\FrameWork</OutDir>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(DH)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(DH)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(DH)</IncludePath>
+    <LibraryPath>$(DL32)$(DL64);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <PrecompiledHeaderFile>Framework.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>./;../_Libraries/;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+      <AdditionalLibraryDirectories>../_Libraries/;</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Framework.cpp" />
+    <ClCompile Include="Game\Actor\Character.cpp" />
+    <ClCompile Include="Game\Actor\Pokemon.cpp" />
+    <ClCompile Include="Game\AI\State\AttackState.cpp" />
+    <ClCompile Include="Game\AI\State\MonsterState.cpp" />
+    <ClCompile Include="Game\AI\State\IdleState.cpp" />
+    <ClCompile Include="Game\Item\Item.cpp" />
+    <ClCompile Include="Game\Item\HealingItem.cpp" />
+    <ClCompile Include="Game\Item\PokeBall.cpp" />
+    <ClCompile Include="Game\Item\Keyitem.cpp" />
+    <ClCompile Include="Game\Map\Battle\Battle.cpp" />
+    <ClCompile Include="Game\Map\Battle\NPCBattle.cpp" />
+    <ClCompile Include="Game\Map\Battle\BattleOpening.cpp" />
+    <ClCompile Include="Game\Map\Building\PMCenter.cpp" />
+    <ClCompile Include="Game\Map\City\01_TaechoTown.cpp" />
+    <ClCompile Include="Game\Map\City\02_SangrokCity.cpp" />
+    <ClCompile Include="Game\Map\Road\01_Route01.cpp" />
+    <ClCompile Include="Game\Map\Stage.cpp" />
+    <ClCompile Include="Game\Map\Map.cpp" />
+    <ClCompile Include="Game\Status\Status.cpp" />
+    <ClCompile Include="Game\Status\Skills.cpp" />
+    <ClCompile Include="Game\Status\PkType.cpp" />
+    <ClCompile Include="Game\Status\PokeDex.cpp" />
+    <ClCompile Include="Game\UI\ExpBar.cpp" />
+    <ClCompile Include="Game\UI\HpBar.cpp" />
+    <ClCompile Include="Game\UI\ProgressBar.cpp" />
+    <ClCompile Include="Game\UI\BattleBG.cpp" />
+    <ClCompile Include="Game\UI\SwitchPokemon.cpp" />
+    <ClCompile Include="Game\Menu\ItemBag.cpp" />
+    <ClCompile Include="GeoMetries\Rect.cpp" />
+    <ClCompile Include="GeoMetries\RectGame.cpp" />
+    <ClCompile Include="GeoMetries\Star.cpp" />
+    <ClCompile Include="GeoMetries\TextureRect.cpp" />
+    <ClCompile Include="GeoMetries\ShadedTexture.cpp" />
+    <ClCompile Include="GeoMetries\BlurTexture.cpp" />
+    <ClCompile Include="GeoMetries\AnimationRect.cpp" />
+    <ClCompile Include="GeoMetries\Tile\Tile.cpp" />
+    <ClCompile Include="GeoMetries\Tile\TileMap.cpp" />
+    <ClCompile Include="GeoMetries\Tile\TileSet.cpp" />
+    <ClCompile Include="Renders\IA\VertexBuffer.cpp" />
+    <ClCompile Include="Renders\IA\IndexBuffer.cpp" />
+    <ClCompile Include="Renders\IA\InputLayout.cpp" />
+    <ClCompile Include="Renders\Resources\VertexTypes.cpp" />
+    <ClCompile Include="Renders\Resources\Texture2D.cpp" />
+    <ClCompile Include="Renders\Shaders\IShader.cpp" />
+    <ClCompile Include="Renders\Shaders\VertexShader.cpp" />
+    <ClCompile Include="Renders\Shaders\PixelShader.cpp" />
+    <ClCompile Include="Renders\States.cpp" />
+    <ClCompile Include="Systems\Graphics.cpp" />
+    <ClCompile Include="Systems\Keyboard.cpp" />
+    <ClCompile Include="Systems\Mouse.cpp" />
+    <ClCompile Include="Systems\Time.cpp" />
+    <ClCompile Include="Systems\Window.cpp" />
+    <ClCompile Include="Systems\Camera.cpp" />
+    <ClCompile Include="Systems\Sounds.cpp" />
+    <ClCompile Include="Systems\SRV.cpp" />
+    <ClCompile Include="Systems\Text.cpp" />
+    <ClCompile Include="Utilities\Gui.cpp" />
+    <ClCompile Include="Utilities\DirectHelper.cpp" />
+    <ClCompile Include="Utilities\Rendertexture.cpp" />
+    <ClCompile Include="Utilities\BoundingBox.cpp" />
+    <ClCompile Include="Utilities\String.cpp" />
+    <ClCompile Include="Utilities\Path.cpp" />
+    <ClCompile Include="Utilities\Animator.cpp" />
+    <ClCompile Include="Utilities\UI.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Framework.h" />
+    <ClInclude Include="Game\Actor\Character.h" />
+    <ClInclude Include="Game\Actor\Pokemon.h" />
+    <ClInclude Include="Game\AI\State\AttackState.h" />
+    <ClInclude Include="Game\AI\State\MonsterState.h" />
+    <ClInclude Include="Game\AI\State\IdleState.h" />
+    <ClInclude Include="Game\Item\Item.h" />
+    <ClInclude Include="Game\Item\HealingItem.h" />
+    <ClInclude Include="Game\Item\PokeBall.h" />
+    <ClInclude Include="Game\Item\KeyItem.h" />
+    <ClInclude Include="Game\Map\Battle\Battle.h" />
+    <ClInclude Include="Game\Map\Battle\NPCBattle.h" />
+    <ClInclude Include="Game\Map\Battle\BattleOpening.h" />
+    <ClInclude Include="Game\Map\Building\PMCenter.h" />
+    <ClInclude Include="Game\Map\City\01_TaechoTown.h" />
+    <ClInclude Include="Game\Map\City\02_SangrokCity.h" />
+    <ClInclude Include="Game\Map\Road\01_Route01.h" />
+    <ClInclude Include="Game\Map\Stage.h" />
+    <ClInclude Include="Game\Map\Map.h" />
+    <ClInclude Include="Game\Status\Status.h" />
+    <ClInclude Include="Game\Status\Skills.h" />
+    <ClInclude Include="Game\Status\PkType.h" />
+    <ClInclude Include="Game\Status\PokeDex.h" />
+    <ClInclude Include="Game\UI\ExpBar.h" />
+    <ClInclude Include="Game\UI\HpBar.h" />
+    <ClInclude Include="Game\UI\ProgressBar.h" />
+    <ClInclude Include="Game\UI\BattleBG.h" />
+    <ClInclude Include="Game\UI\SwitchPokemon.h" />
+    <ClInclude Include="Game\Menu\ItemBag.h" />
+    <ClInclude Include="GeoMetries\Rect.h" />
+    <ClInclude Include="GeoMetries\RectGame.h" />
+    <ClInclude Include="GeoMetries\Star.h" />
+    <ClInclude Include="GeoMetries\TextureRect.h" />
+    <ClInclude Include="GeoMetries\ShadedTexture.h" />
+    <ClInclude Include="GeoMetries\BlurTexture.h" />
+    <ClInclude Include="GeoMetries\AnimationRect.h" />
+    <ClInclude Include="GeoMetries\Tile\Tile.h" />
+    <ClInclude Include="GeoMetries\Tile\TileMap.h" />
+    <ClInclude Include="GeoMetries\Tile\TileSet.h" />
+    <ClInclude Include="Interfaces\IObject.h" />
+    <ClInclude Include="Renders\IA\VertexBuffer.h" />
+    <ClInclude Include="Renders\IA\IndexBuffer.h" />
+    <ClInclude Include="Renders\IA\InputLayout.h" />
+    <ClInclude Include="Renders\Resources\VertexTypes.h" />
+    <ClInclude Include="Renders\Resources\ShaderBuffer.h" />
+    <ClInclude Include="Renders\Resources\GlobalBuffer.h" />
+    <ClInclude Include="Renders\Resources\Texture2D.h" />
+    <ClInclude Include="Renders\Shaders\IShader.h" />
+    <ClInclude Include="Renders\Shaders\VertexShader.h" />
+    <ClInclude Include="Renders\Shaders\PixelShader.h" />
+    <ClInclude Include="Renders\States.h" />
+    <ClInclude Include="Systems\Graphics.h" />
+    <ClInclude Include="Systems\Keyboard.h" />
+    <ClInclude Include="Systems\Mouse.h" />
+    <ClInclude Include="Systems\Time.h" />
+    <ClInclude Include="Systems\Window.h" />
+    <ClInclude Include="Systems\Camera.h" />
+    <ClInclude Include="Systems\Sounds.h" />
+    <ClInclude Include="Systems\SRV.h" />
+    <ClInclude Include="Systems\Text.h" />
+    <ClInclude Include="Utilities\Gui.h" />
+    <ClInclude Include="Utilities\SingletonBase.h" />
+    <ClInclude Include="Utilities\DirectHelper.h" />
+    <ClInclude Include="Utilities\Rendertexture.h" />
+    <ClInclude Include="Utilities\BoundingBox.h" />
+    <ClInclude Include="Utilities\String.h" />
+    <ClInclude Include="Utilities\Path.h" />
+    <ClInclude Include="Utilities\Animator.h" />
+    <ClInclude Include="Utilities\UI.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
